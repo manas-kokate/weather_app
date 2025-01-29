@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-...=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="search_sec">
+            <input type="text" class="searchbox" placeholder="City">
+            <button onclick="showcard()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h2>Weather</h2>
+                <div class="time"></div>
+            </div>
+            <div class="date"></div>
+            <div class="location">
+                <span>Location:</span>
+                <span id="city"></span>
+            </div>
+            <div class="temp"><span id="temp"></span><sup class="deg">o</sup>c</div>
+            <div class="weather">
+                <img src="https://imgs.search.brave.com/p_AzLAhJNF6-9f0zUZ-THeapCfor0tTe-T2yo2dYUM0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4y/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvd2VhdGhlci1m/bGF0LTE0LzY0L3dl/YXRoZXIwMi01MTIu/cG5n"
+                    alt="Weather Icon">
+                <span class="description"></span>
+            </div>
+        </div>
+        <!-- LOADER  -->
+        <div class="loader" id="loader">
+            <div class="loading-text">
+                Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+            </div>
+            <div class="loading-bar-background">
+                <div class="loading-bar">
+                    <div class="white-bars-container">
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
